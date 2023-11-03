@@ -4,7 +4,7 @@ import { SvgProps } from "../../../types/types";
 export default function Facebook({ width, height, color }: SvgProps) {
   return (
     <svg
-      enable-background="new 0 0 100 100"
+      enableBackground="new 0 0 100 100"
       height={height}
       id="Layer_1"
       version="1.1"
