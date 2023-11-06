@@ -1,0 +1,18 @@
+.slice-img {
+  width: 50px;
+  height: 50px;
+  background: rgb(182, 182, 182);
+  border-radius: 100%;
+  padding: 5px;
+  border: 1px solid rgb(11, 239, 255);
+  animation: spinImg 30s linear infinite;
+}
+
+@keyframes spinImg {
+  0% {
+    transform: translateX(0); /* Start from the current position */
+  }
+  100% {
+    transform: translateX(-100vw); /* Move to the right by a large distance */
+  }
+}

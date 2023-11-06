@@ -16,7 +16,7 @@ export default function Header({}: Props) {
   }, [params]);
 
   return (
-    <main className="flex justify-between py-10 md:py-20 md:px-20 lg:max-h-[60%] relative">
+    <main className="flex justify-between py-5 items-center md:px-20 lg:max-h-[60%] sticky top-0 backdrop-blur-xl z-[99999999999]">
       <div className="w-20 flex flex-col items-center">
         <Image
           src="/images/loader.png"
@@ -29,25 +29,27 @@ export default function Header({}: Props) {
       </div>
       <div className="flex justify-center w-1/2">
         <nav className="gap-5 font-extrabold text-xl text-white justify-center hidden md:flex">
-          <div>
-            <Link href="/">
-              <p>Home</p>
-            </Link>
-            {!hashParam && <ArrowUp />}
-          </div>
-          <Link href="#">
-            <p>Service</p>
+          <Link style={{ opacity: !hashParam ? 1 : .4 }} href="#">
+            <p>Home</p>
           </Link>
-          <div>
-            <Link href="#intro">
-              <p>Projects</p>
-            </Link>
-            {hashParam === "#intro" && <ArrowUp />}
-          </div>
-          <Link href="#">
+
+          <Link
+            style={{ opacity: hashParam === "#experience" ? 1 : 0.4 }}
+            href="/#experience"
+          >
+            <p>Experience</p>
+          </Link>
+
+          <Link
+            style={{ opacity: hashParam === "#story" ? 1 : 0.4 }}
+            href="#story"
+          >
+            <p>Story</p>
+          </Link>
+          <Link style={{ opacity: 0.4 }} href="#">
             <p>Language</p>
           </Link>
-          <Link href="#">
+          <Link style={{ opacity: 0.4 }} href="#">
             <p>Experience</p>
           </Link>
         </nav>

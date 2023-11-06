@@ -42,7 +42,7 @@ export default function Hero() {
             ullam ea accusamus architecto ratione?
           </p>
 
-          <Link href="#" className="flex justify-end">
+          <Link href="#story" className="flex justify-end">
             <p className="text-[orange] duration-300 ease-linear hover:translate-x-[-2rem]">
               My Story {" -> "}
             </p>
